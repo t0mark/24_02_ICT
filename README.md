@@ -1,36 +1,37 @@
 # edu_FastAPI_Community
-
-학습용 FastAPI 커뮤니티 프로젝트
+- 학습용 FastAPI 커뮤니티 프로젝트
 
 ## 필요 라이브러리 확인 & 설치
-
-필요 라이브러리 ./requirements.txt
-설치 : pip install -r requirements.txt
-
+``` bash
+# 설치
+pip install -r requirements.txt
+```
 ## 서버 실행 명령어
 
 ### 개발 환경
-
+``` bash
 uvicorn server.main:app --reload --host=0.0.0.0 --port=8088
+```
 
 ### 배포 환경
-
+``` bash
 nohup uvicorn server.main:app --reload --host=0.0.0.0 --port=8088 &
+```
 
 ## 클라이언트 실행 명령어
-
+``` bash
 python -m http.server 80 -d ./app
-
+```
 ## 스웨거 주소
-
 http://localhost:8088/docs
 
 ## DB 생성
-
+``` sql
 CREATE DATABASE community default CHARACTER SET UTF8;
+```
 
 ## 테이블 구조
-
+``` sql
 CREATE TABLE `user` (
 `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
 `password` varchar(255) DEFAULT NULL,
@@ -63,3 +64,4 @@ CREATE TABLE `comment` (
 `createdAt` datetime DEFAULT NULL,
 PRIMARY KEY (`idx`)
 );
+```
