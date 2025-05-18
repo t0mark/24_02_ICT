@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+        rel="stylesheet"
+        href="./truthtable.css"
+        crossorigin="anonymous">
+    <title>진리표</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="rows">
+            <label for="vars">변수</label>
+            <input type="text" id="vars" placeholder="변수를 입력하세요."/>
+        </div>
+        <div class="rows">
+            <label for="expression">함수</label>
+            <input type="text" id="expression" placeholder="함수를 입력하세요."/>
+        </div>
+        <div class="rows">
+            <button id="getResult">진리표 계산</button>
+        </div>
+        <table id="truthTable">
+        </table>
+    </div>
+    <div class="background"></div>
+</body>
+<script src="truthtable.js" type="module"></script>
+</html>
